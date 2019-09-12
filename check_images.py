@@ -43,16 +43,11 @@ def main():
     # Collect start time
     start_time = time()
     
-    # TODO 1: Define get_input_args function within the file get_input_args.py
-    # This function retrieves 3 Command Line Arugments from user as input from
-    # the user running the program from a terminal window. This function returns
-    # the collection of these command line arguments from the function call as
-    # the variable in_arg
-    in_arg = get_input_args()
+    # Collect user input arguments from command line
+    input_args = get_input_args()
 
-    # Check command line arguments using in_arg
-    check_command_line_arguments(in_arg)
-
+    # Check command line arguments
+    check_command_line_arguments(input_args)
     
     # TODO 2: Define get_pet_labels function within the file get_pet_labels.py
     # Once the get_pet_labels function has been defined replace 'None'
