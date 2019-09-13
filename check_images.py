@@ -49,14 +49,8 @@ def main():
     # Check command line arguments
     check_command_line_arguments(input_args)
     
-    # TODO 2: Define get_pet_labels function within the file get_pet_labels.py
-    # Once the get_pet_labels function has been defined replace 'None'
-    # in the function call with in_arg.dir  Once you have done the replacements
-    # your function call should look like this:
-    #             get_pet_labels(in_arg.dir)
-    # This function creates the results dictionary that contains the results,
-    # this dictionary is returned from the function call as the variable results
-    results = get_pet_labels(None)
+    # Create results dictionary of file_name:label pairs
+    results = get_pet_labels(input_args.dir)
 
     # Check pet images in the results dictionary using results
     check_creating_pet_image_labels(results)
