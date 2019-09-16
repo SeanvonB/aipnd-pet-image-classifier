@@ -38,7 +38,7 @@ def clean_name(name):
     return label
 
 # Create results dictionary
-def get_pet_labels(image_dir):
+def get_pet_labels(images_dir):
     """
     Parameters:
      image_dir - The (full) path to the folder of images that are to be
@@ -53,7 +53,7 @@ def get_pet_labels(image_dir):
     results_dic = {}
 
     # Create list of file names to be added
-    file_names = listdir(image_dir)
+    file_names = listdir(images_dir)
 
     # Process list into file_name:label dictionary
     for name in file_names:
@@ -63,7 +63,7 @@ def get_pet_labels(image_dir):
 
             # Add to dictionary with cleaned label (if new)
             if name not in results_dic:
-                results_dic[name] = clean_name(name)
+                results_dic[name] = [clean_name(name)]
             else:
                 print(name + " already exists in dictionary")
 

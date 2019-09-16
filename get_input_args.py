@@ -35,7 +35,7 @@ def get_input_args():
     parser.add_argument("-dir",
                         "--dir",
                         type=str,
-                        default="./pet_images", 
+                        default="./pet_images/",
                         help="path to image directory")
 
     # Add argument to specify CNN architcture
@@ -52,7 +52,7 @@ def get_input_args():
                         "--df",
                         type=str,
                         default ="./dognames.txt",
-                        help="path to name file") 
+                        help="path to name file")
     
     # Return parsed collection of arguments
     return parser.parse_args()
