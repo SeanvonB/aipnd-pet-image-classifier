@@ -35,7 +35,7 @@ def get_input_args():
     parser.add_argument("-dir",
                         "--dir",
                         type=str,
-                        default="./pet_images.tar.gz", 
+                        default="./pet_images", 
                         help="path to image directory")
 
     # Add argument to specify CNN architcture
