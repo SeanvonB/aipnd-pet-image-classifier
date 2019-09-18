@@ -1,23 +1,20 @@
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # */AIPND/intropylab-classifying-images/print_functions_for_lab_checks.py
 #                                                                             
-# PROGRAMMER: Jennifer S.                                                    
-# DATE CREATED: 05/14/2018                                  
-# REVISED DATE:             <=(Date Revised - if any)                         
-# PURPOSE:  This set of functions can be used to check your code after programming 
+# PROGRAMMER: Jennifer S.
+# DATE CREATED: 05/14/2018
+# REVISED DATE: 
+# PURPOSE:  This set of functions can be used to check your code after programming
 #           each function. The top section of each part of the lab contains
 #           the section labeled 'Checking your code'. When directed within this
-#           section of the lab one can use these functions to more easily check 
+#           section of the lab one can use these functions to more easily check
 #           your code. See the docstrings below each function for details on how
 #           to use the function within your code.
-#
-##
 
 # Functions below defined to help with "Checking your code", specifically
 # running these functions with the appropriate input arguments within the
 # main() funtion will print out what's needed for "Checking your code"
-#
 def check_command_line_arguments(in_arg):
     """
     For Lab: Classifying Images - 7. Command Line Arguments
@@ -210,7 +207,7 @@ def check_classifying_labels_as_dogs(results_dic):
 def check_calculating_results(results_dic, results_stats_dic):
     """    For Lab: Classifying Images - 14. Calculating Results
     Prints First statistics from the results stats dictionary (that was created
-    by the calculates_results_stats() function), then prints the same statistics
+    by the calculate_results_stats() function), then prints the same statistics
     that were calculated in this function using the results dictionary.
     Assumes you defined the results_stats dictionary and the statistics 
     as was outlined in '14. Calculating Results '
@@ -234,7 +231,7 @@ def check_calculating_results(results_dic, results_stats_dic):
 
     """
     if results_stats_dic is None:
-        print("* Doesn't Check the Results Dictionary because 'calculates_results_stats' hasn't been defined.")
+        print("* Doesn't Check the Results Dictionary because 'calculate_results_stats' hasn't been defined.")
     else:
         # Code for checking results_stats_dic -
         # Checks calculations of counts & percentages BY using results_dic
@@ -249,7 +246,7 @@ def check_calculating_results(results_dic, results_stats_dic):
         n_match_breed = 0
     
         # Interates through results_dic dictionary to recompute the statistics
-        # outside of the calculates_results_stats() function
+        # outside of the calculate_results_stats() function
         for key in results_dic:
 
             # match (if dog then breed match)
@@ -298,12 +295,12 @@ def check_calculating_results(results_dic, results_stats_dic):
         pct_corr_breed = ( n_match_breed / n_pet_dog )*100
     
         # prints calculated statistics
-        print("\n ** Statistics from calculates_results_stats() function:")
+        print("\n ** Statistics from calculate_results_stats() function:")
         print("N Images: {:2d}  N Dog Images: {:2d}  N NotDog Images: {:2d} \nPct Corr dog: {:5.1f} Pct Corr NOTdog: {:5.1f}  Pct Corr Breed: {:5.1f}".format(
-              results_stats_dic['n_images'], results_stats_dic['n_dogs_img'],
-              results_stats_dic['n_notdogs_img'], results_stats_dic['pct_correct_dogs'],
+              results_stats_dic['n_images'], results_stats_dic['n_dog_images'],
+              results_stats_dic['n_notdog_images'], results_stats_dic['pct_correct_dogs'],
               results_stats_dic['pct_correct_notdogs'],
-              results_stats_dic['pct_correct_breed']))
+              results_stats_dic['pct_correct_breeds']))
         print("\n ** Check Statistics - calculated from this function as a check:")
         print("N Images: {:2d}  N Dog Images: {:2d}  N NotDog Images: {:2d} \nPct Corr dog: {:5.1f} Pct Corr NOTdog: {:5.1f}  Pct Corr Breed: {:5.1f}".format(
               n_images, n_pet_dog, n_pet_notd, pct_corr_dog, pct_corr_notdog,

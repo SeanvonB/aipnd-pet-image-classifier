@@ -35,7 +35,7 @@ from get_input_args import get_input_args
 from get_pet_labels import get_pet_labels
 from classify_images import classify_images
 from adjust_results_isadog import adjust_results_isadog
-from calculates_results_stats import calculates_results_stats
+from calculate_results_stats import calculate_results_stats
 from print_results import print_results
 
 # Main program function defined below
@@ -70,13 +70,8 @@ def main():
     check_classifying_labels_as_dogs(results)
 
 
-    # TODO 5: Define calculates_results_stats function within the file calculates_results_stats.py
-    # This function creates the results statistics dictionary that contains a
-    # summary of the results statistics (this includes counts & percentages). This
-    # dictionary is returned from the function call as the variable results_stats
-    # Calculates results of run and puts statistics in the Results Statistics
-    # Dictionary - called results_stats
-    results_stats = calculates_results_stats(results)
+    # Use results dictionary to calculate and return a dictionary of results stats
+    results_stats = calculate_results_stats(results)
 
     # Function that checks Results Statistics Dictionary using results_stats
     check_calculating_results(results, results_stats)
