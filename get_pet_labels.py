@@ -21,15 +21,26 @@ def clean_name(name):
 
     # Set all lowercase
     name = name.lower()
-
-    # Replace underscores with spaces
-    split_name = name.split("_")
-
-    # Remove non-alphabetical file details on label
     label = ""
-    for word in split_name:
-        if word.isalpha():
-            label += word + " "
+
+    # Remove file extension
+    if name.endswith(".jpg") or name.endswith(".png") or name.endswith(".gif"):
+        name = name[:-4]
+
+    # Check for multiple "words" in name
+    if "_" in name:
+
+        # Replace underscores with spaces
+        split_name = name.split("_")
+
+        # Remove non-alphabetical file details on label
+        for word in split_name:
+            if word.isalpha():
+                label += word + " "
+    else:
+        
+        # Remove numbers not separated by underscore
+        label += name.strip("0123456789")
 
     # Remove leading/trailing spaces
     label = label.strip()
