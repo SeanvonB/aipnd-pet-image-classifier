@@ -73,15 +73,15 @@ def calculate_results_stats(results_dic):
     for key in results_dic:
         if results_dic[key][3] == 1:
             results_stats_dic["n_dog_images"] += 1
-        elif results_dic[key][3] == 0:
+        if results_dic[key][3] == 0:
             results_stats_dic["n_notdog_images"] += 1
-        elif results_dic[key][2] == 1:
+        if results_dic[key][2] == 1:
             results_stats_dic["n_matches"] += 1
-        elif results_dic[key][3] == 1 and results_dic[key][4] == 1:
+        if results_dic[key][3] == 1 and results_dic[key][4] == 1:
             results_stats_dic["n_correct_dogs"] += 1
-        elif results_dic[key][3] == 0 and results_dic[key][4] == 0:
+        if results_dic[key][3] == 0 and results_dic[key][4] == 0:
             results_stats_dic["n_correct_notdogs"] += 1
-        elif results_dic[key][2] == 1 and results_dic[key][3] == 1:
+        if results_dic[key][2] == 1 and results_dic[key][3] == 1:
             results_stats_dic["n_correct_breeds"] += 1
 
     # Setup variables from countable stats
